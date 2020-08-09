@@ -4,13 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Proffy | Sua plataforma de estudos online</title>
+    <link rel="shortcut icon" href="/images/favicon.png" type="image/png">
+
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/styles/partials/header.css">
     <link rel="stylesheet" href="/styles/partials/forms.css">
     <link rel="stylesheet" href="/styles/partials/page-give-classes.css">
     <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&amp;family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet">
 
-    <script src="/scripts/addField.js" defer></script>
+    <script src="scripts/addField.js" defer></script>
+    <script src="scripts/removeField.js" defer></script>
 
 </head>
 <body id="page-give-classes">
@@ -68,7 +71,13 @@
                     </div>
                 </fieldset>
                 <fieldset id="schedule-items">
-                    <legend>Horários disponíveis <button type="button" id="add-time">+ Novo Horário</button></legend>
+                    <legend>Horários disponíveis
+                        <div class="button-container">
+                            <button type="button" id="add-time">+ Novo Horário</button>
+                            <button type="button" id="remove-time">- Remover Horário</button>
+                        </div> 
+                        
+                    </legend>
                     <div class="schedule-item">
                         <div class="select-block">
                             <label for="weekday">Dia da semana</label>

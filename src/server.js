@@ -1,7 +1,7 @@
 const express = require('express')
 const server = express()
 
-const { pageLanding, pageStudy, pageGiveClasses, saveClasses } = require("./pages")
+const { pageLanding, pageStudy, pageGiveClasses, saveClasses, successScreen } = require("./pages")
 
 const port = 5500
 
@@ -18,6 +18,7 @@ server.use(express.static("public"))
 server.get("/", pageLanding)
 server.get("/study", pageStudy)
 server.get("/give-classes", pageGiveClasses)
+server.get("/success", successScreen)
 server.post("/save-classes", saveClasses)
 
 server.listen(port)
